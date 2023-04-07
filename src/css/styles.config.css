@@ -1,0 +1,198 @@
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Normalize */
+@import url("./normalize.css");
+
+:root {
+    --red-dark: #ea2c1a;
+    --blue-dark: #0f283d;
+    --black-dark: #191919;
+    --paypal-dark: #163152;
+    --paypal: #1E477A;
+    --patreon: #f96854;
+}
+
+/* Undraw Colors */
+:root {
+    --undraw-handcraft-green: #A0FFF0;
+    --undraw-handcraft-red: #F5A9C4;
+    --undraw-handcraft-violet: #CBC8FD;
+    --undraw-handcraft-blue: #A9AFF5;
+    --undraw-handcraft-yellow: #F7DDB4;
+
+    --undraw-green: #00BFA6;
+    --undraw-orange: #F9A826;
+    --undraw-violet: #6C63FF;
+    --undraw-blue: #536DFE;
+    --undraw-red: #F50057;
+    --undraw-skyblue: #00B0FF;
+}
+
+/* Bootstrap Colors */
+:root {
+    /* Hidden colors */
+    --bootstrap-purple: #563d7c;
+    --bootstrap-skyblue: #5bc0de;
+    --bootstrap-yellow: #f0ad4e;
+
+    /* Basic colors */
+    --bootstrap-bg-primary: #007bff;
+    --bootstrap-bg-info: #17a2b8;
+    --bootstrap-bg-light: #f8f9fa;
+    --bootstrap-bg-danger: #dc3545;
+    --bootstrap-bg-dark: #343a40;
+}
+
+/* Firebase Colors */
+:root {
+    --firebase-yellow: #FFCA28;
+    --firebase-amber: #FFA000;
+    --firebase-orange: #F57C00;
+    --firebase-coreal: #FF8A65;
+    --firebase-gray: #ECEFF1;
+    --firebase-navy-blue: #2C384A;
+    --firebase-dark-navy-blue: #222b39;
+}
+
+/* Discord colors */
+:root {
+    --discord-blue2:#b5ccf1;
+    --discord-blue: #7289da;
+    --discord-black1: #424549;
+    --discord-black2: #36393e;
+    --discord-black3: #282b30;
+    --discord-black4: #1e2124;
+}
+
+:root {
+    --default-shadow-gray: #a6a6a6;
+    --default-purple: #373295;
+    --default-orange: #eb9e5c;
+    --default-yellow: #F0F0A8;
+    --default-green: #9bd4ae;
+    --default-black: #404040;
+    --default-white: #fcfcfc;
+    --default-roxa: #f0a4ed;
+    --default-blue: #1B3C59;
+    --default-pink: #F2A999;
+    --default-red: #f84e3f;
+}
+
+/* the same color but more clear */
+:root {
+    --shadow-clear: #d9d9d9;
+    --red-clear: #fde9e7;
+    --white-clear: #fafafa;
+    --orange-clear: #ffc999;
+    --yellow-clear: #ffff80;
+}
+
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-image: linear-gradient( 111.1deg,  rgba(0,40,70,1) -4.8%, rgba(255,115,115,1) 82.7%, rgba(255,175,123,1) 97.2% ); */
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    width: 100%;
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+a, li, ul, ol {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    cursor: pointer !important;
+    width: fit-content;
+}
+
+label {
+    display: block;
+}
+
+input {
+    outline: none;
+    display: block;
+}
+
+[pointer] {
+    cursor: pointer;
+}
+
+pre {
+    overflow-y: scroll;
+    font-size: 14px !important;
+}
+
+code {
+    border-radius: 4px;
+}
+
+pre::before, pre::after {
+    box-shadow: 0 0 1px black !important;
+    display: none !important;
+}
+
+[data-type="new"]::after {
+    content: 'New';
+    color: white;
+    padding: 2px 6px;
+    margin-left: 4px;
+    border-radius: 4px;
+    background-color: var(--undraw-red);
+}
+
+[data-type="future"]::after {
+    content: 'Futuro';
+    color: #ddd;
+    padding: 2px 6px;
+    margin-left: 4px;
+    border-radius: 4px;
+    background-color: var(--bootstrap-bg-dark);
+}
+
+/* Particulas */
+#particles-js {
+    position: fixed;
+    z-index: -5;
+    width: 100vw;
+    height: auto;
+}
+
+/* Scroll */
+/* la barra completa */
+body::-webkit-scrollbar-track {
+    background-color: var(--firebase-dark-navy-blue);
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+/* el scroll */
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--discord-black4);
+    box-shadow: inset 2px 2px 2px rgba(255,255,255, .4), inset -2px -2px 2px rgba(255,255,255, .2);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--discord-black1);
+}
