@@ -1,8 +1,11 @@
+import Minav from "./minav/Minav"
+import './home.css'
+
 function Home() {
 
   return (
-    <div className="App">
-      hola
+    <div id="container">
+      <Minav/>
     </div>
   )
 }

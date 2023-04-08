@@ -1,0 +1,79 @@
+#minav {
+    width: 100%;
+}
+
+/* div que centra el logo e icono */
+#minav-centre {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+}
+
+/* contenedor del logo con icono hamburguesa */
+#minav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6em 3em .4em 1em;
+}
+
+/* contenedor de los enlaces */
+#minav-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    right: -220px;
+    padding: 1.4em 1.2em;
+    transition: right .2s; /* efecto de movimiento */
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* todos los links */
+#minav-bottom a {
+    color: var(--firebase-gray);
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* iconos en el menu */
+#minav-bottom a svg {
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+
+#minav-bottom a:hover {
+    box-shadow: 0 1px var(--default-shadow-gray);
+}
+
+/* todos los links excepto el último */
+#minav-bottom a:not(:last-child) {
+    margin-bottom: 1.4em;
+}
+
+/* logo */
+#minav-top img {
+    width: 80px;
+    filter: drop-shadow(4px 4px 4px black);
+}
+
+/* icono hamburguesa */
+#minav-top svg {
+    cursor: pointer;
+    transform: scale(1.8);
+    color: var(--default-shadow-gray);
+}
+
+/* estado activo */
+.minav-active {
+    right: 1em !important;
+}
