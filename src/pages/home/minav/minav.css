@@ -1,5 +1,7 @@
 #minav {
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 /* div que centra el logo e icono */

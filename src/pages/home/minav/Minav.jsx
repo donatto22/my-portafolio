@@ -8,7 +8,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 const Minav = () => {
     const [active, setActive] = useState(false)
-    
+
     return (
         <div id="minav">
             <div id="minav-centre">
