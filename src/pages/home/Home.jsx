@@ -1,16 +1,10 @@
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import ScrollReveal from "scrollreveal";
 import Minav from "./minav/Minav"
 import './home.css'
 
 function Home() {
 	const myRef = useRef(null)
-
-	useEffect(() => {
-		fetch(`https://api.github.com/users/donatto22`)
-			.then(response => response.json())
-			.then(data => setUser(data));
-	}, [])
 
 	useEffect(() => {
 		ScrollReveal().reveal(myRef.current, {
