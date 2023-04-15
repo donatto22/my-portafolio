@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import ScrollReveal from "scrollreveal";
 import Minav from "./minav/Minav"
-import './home.css'
+import './Home.css'
 
 function Home() {
 	const myRef = useRef(null)
