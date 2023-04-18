@@ -14,17 +14,20 @@
 
 /* titulo */
 #repo-content > div:first-child {
-    font-size: 28px;
+    font-size: 26px;
     margin: 1em 0;
 }
 
 #repositories {
-    height: calc(100% - 2.6em);
+    height: calc(100% - 5.6em);
     overflow-y: scroll;
 }
 
-#git-repo {
+#git-repo:not(:last-child) {
     margin-bottom: 1em;
+}
+
+#git-repo {
     margin-right: 10px;
     padding: 1em;
     border-radius: 6px;
@@ -47,14 +50,28 @@
     color: #ecc2c2;
 }
 
+/* contenedor del link y language */
+#repo-link-language {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: .4em;
+}
+
+/* languaje mayor escrito del repo */
+#repo-language {
+    color: #ecc2c2;
+}
+
+/* boton que envia al repositorio de github */
 #repo-btn {
     background-color: rgba(0, 0, 0, .1);
     padding: 6px 10px;
     width: fit-content;
     color: #ecc2c2;
-    font-size: 16px;
     display: flex;
     align-items: center;
+    border-radius: 6px;
     gap: 6px;
 }
 

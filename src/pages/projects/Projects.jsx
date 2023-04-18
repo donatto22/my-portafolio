@@ -3,6 +3,7 @@ import ScrollReveal from "scrollreveal";
 
 import './projects.css'
 import Repositories from './repositories/Repositories';
+import Toprepo from './toprepo/Toprepo';
 
 const Projects = () => {
     const myRef = useRef(null)	
@@ -14,13 +15,32 @@ const Projects = () => {
 		})
 	}, [])
 
+    // repositorios github
+    const [repos, setRepos] = useState(null)
+    
+    useEffect(() => {
+		fetch(`https://api.github.com/users/donatto22/repos`)
+			.then(response => response.json())
+			.then(data => setRepos(data));
+	}, [])
+
+    let vivian = []
+
     return (
         <div id="projects" ref={myRef}>
             <div id="top">
-                2
+                {
+                    repos &&
+                    (() => {
+                        const targetRepo = (id) => { return repos.find(repo => repo.id === id) }// vivian
+                        return (
+                            <Toprepo targetRepo={targetRepo(380901585)} /> // vivian
+                        )
+                    })()
+                }
             </div>
 
-            <Repositories/>
+            <Repositories repos={repos}/>
         </div>
     )
 }

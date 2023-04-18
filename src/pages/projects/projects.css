@@ -15,6 +15,6 @@
     background-color: rgba(0, 0, 0, .1);
     width: 65%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 

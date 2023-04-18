@@ -57,7 +57,7 @@
       box-shadow:  0px 0px 100px -20px var(--default-shadow-gray);
     }
     50% {
-      box-shadow: 0px 0px 100px -20px var(--discord-blue);
+      box-shadow: 0px 0px 100px -20px orange;
     }
     100% {
       box-shadow:  0px 0px 100px -20px var(--default-shadow-gray);
