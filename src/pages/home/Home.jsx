@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import ScrollReveal from "scrollreveal";
 
-import './home.css'
+// import './home.css'
 
 function Home() {
 	const myRef = useRef(null)	
