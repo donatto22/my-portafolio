@@ -1,15 +1,3 @@
-#container {
-    background-image: linear-gradient( 111.1deg,  rgba(0,40,70,1) -4.8%, rgba(255,115,115,1) 82.7%, rgba(255,175,123,1) 97.2% );
-    min-height: 100vh;
-    width: calc(100vw - 400px);
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-/* #minav {
-    position: sticky;
-    top: 0;
-} */
 
 /* div que centra el logo e icono */
 #minav-centre {
@@ -22,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .6em 1.4em .4em 1em;
+    padding: .6em 2em .4em .5em;
 }
 
 /* logo */

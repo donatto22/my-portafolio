@@ -1,23 +1,21 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from 'react'
 import ScrollReveal from "scrollreveal";
-import Minav from "./minav/Minav"
-import './Home.css'
+
+import './home.css'
 
 function Home() {
-	const myRef = useRef(null)
+	const myRef = useRef(null)	
 
 	useEffect(() => {
 		ScrollReveal().reveal(myRef.current, {
 		  // opciones de configuración aquí
-		  duration: 3000
+		  duration: 700
 		})
 	}, [])
 
 	return (
-		<div id="container" >
-			<div id="min-container" ref={myRef}>
-				<Minav />
-			</div>
+		<div id="home" ref={myRef}>
+			hola
 		</div>
 	)
 }

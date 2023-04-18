@@ -109,10 +109,6 @@ body {
     min-height: 100vh;
 }
 
-#root {
-    display: flex;
-}
-
 img {
     width: 100%;
     pointer-events: none;
@@ -222,4 +218,20 @@ body::-webkit-scrollbar-thumb:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #d7d2cc;
+}
+
+/* Global container */
+#container {
+    --padding: 1em;
+    /* var(--minav-height) */
+    height: calc(100vh - (var(--padding) * 2) - 100px);
+    color: var(--firebase-gray);
+    padding: var(--padding) 0;
+}
+
+#min-container {
+    border-radius: 20px;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
 }

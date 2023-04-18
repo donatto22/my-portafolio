@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
@@ -9,6 +9,13 @@ document.fullsc
 
 const Minav = () => {
     const [active, setActive] = useState(false)
+
+    const nav = useRef(null)
+
+    useEffect(() => {
+        if (nav.current)
+        document.documentElement.style.setProperty('--minav-height', nav.current.offsetHeight + 'px');
+    }, [])
 
     // Habilitar fullscreen
     const handleFullscreen = async () => {
@@ -25,7 +32,7 @@ const Minav = () => {
     }
 
     return (
-        <div id="minav">
+        <div id="minav" ref={nav}>
             <div id="minav-centre">
                 <div id="minav-top">
                     <img src="./lockerglogo.png" alt="locker g logo" />

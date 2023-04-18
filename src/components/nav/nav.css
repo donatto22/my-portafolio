@@ -1,20 +1,39 @@
+:root {
+    --height: 100vh;
+}
+
 #nav {
-    width: 400px;
-    background-color: var(--discord-black4);
-    color: var(--default-shadow-gray);
+    width: 100vw;
     display: flex;
 }
 
+#nav-left {
+    background-color: var(--discord-black4);
+    color: var(--default-shadow-gray);
+    /* margin: 4em 1em 0; */
+    width: 400px;
+    height: var(--height);
+}
+
+/* fondo */
+#nav-right {
+    background-image: linear-gradient( 111.1deg,  rgba(0,40,70,1) -4.8%, rgba(255,115,115,1) 82.7%, rgba(255,175,123,1) 97.2% );
+    min-height: 100vh;
+    width: calc(100vw - 400px);
+}
+
 #nav-content {
-    margin: 4em 1em 0;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--height);
 }
 
 #profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 /* imagen de perfil */
@@ -50,7 +69,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin-top: 2em;
+    margin: 2em 1em 0;
 }
 
 /* enlaces */

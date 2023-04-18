@@ -1,0 +1,20 @@
+#projects {
+    --padding: 1em;
+    height: calc(100% - (var(--padding) * 2));
+    display: flex;
+    padding: var(--padding);
+    gap: 1em;
+}
+
+#projects > div {
+    height: 100%;
+}
+
+/* proyectos destacados */
+#top {
+    background-color: rgba(0, 0, 0, .1);
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+

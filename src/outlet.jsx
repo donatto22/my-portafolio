@@ -4,8 +4,9 @@ import Nav from './components/nav/Nav'
 const OutletManager = () => {
     return (
         <>
-        <Nav/>
-        <Outlet/>
+        <Nav>
+            <Outlet/>
+        </Nav>
         </>
     )
 }

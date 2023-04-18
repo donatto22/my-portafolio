@@ -1,0 +1,72 @@
+/* contenedor de repositorios */
+#repo {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    width: 35%;
+}
+
+/* bloque que contiene titulo y repositorios */
+#repo-content {
+    height: calc(100% - 2em);
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* titulo */
+#repo-content > div:first-child {
+    font-size: 28px;
+    margin: 1em 0;
+}
+
+#repositories {
+    height: calc(100% - 2.6em);
+    overflow-y: scroll;
+}
+
+#git-repo {
+    margin-bottom: 1em;
+    margin-right: 10px;
+    padding: 1em;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+#repo-name {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#repo-name svg {
+    color: #dda8a8;
+}
+
+/* lenguaje mas usado y descripcion */
+#repo-language, #repo-description {
+    font-size: 16px;
+    color: #ecc2c2;
+}
+
+#repo-btn {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 6px 10px;
+    width: fit-content;
+    color: #ecc2c2;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#repo-btn:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#repo-btn svg {
+    transform: scale(0.8);
+    margin-top: -2px;
+}
+
+#repo-description {
+    margin: 1em 0;
+}
