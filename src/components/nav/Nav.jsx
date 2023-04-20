@@ -6,6 +6,8 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined'
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
 
+import { useSelector } from 'react-redux'
+
 import Minav from '../minav/Minav'
 
 import './nav.css'
@@ -18,6 +20,8 @@ const Nav = ({ children }) => {
 			.then(response => response.json())
 			.then(data => setUser(data));
 	}, [])
+    
+    const selector = useSelector(state => state.background)
 
     return (
         <>
@@ -47,7 +51,7 @@ const Nav = ({ children }) => {
                 </div>
             </div>
 
-            <div id="nav-right" className="bg-one">
+            <div id="nav-right" className={selector}>
                 <Minav/>
 
                 <div id="container">

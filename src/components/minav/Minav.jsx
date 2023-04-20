@@ -3,9 +3,9 @@ import { useState, useEffect, useRef } from 'react'
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined'
-import CloseFullscreenOutlinedIcon from '@mui/icons-material/CloseFullscreenOutlined'
 
-document.fullsc
+import { useSelector, useDispatch } from 'react-redux'
+import { changeBackground } from '../../features/background/backgroundSlice'
 
 const Minav = () => {
     const [active, setActive] = useState(false)
@@ -31,6 +31,30 @@ const Minav = () => {
         }    
     }
 
+    const dispatch = useDispatch()
+    const selector = useSelector(state => state.background)
+
+    const changebg1 = (e) => {
+        e.preventDefault()
+        dispatch(changeBackground('bg-one'))
+        console.log(selector)
+    }
+
+    const changebg2 = (e) => {
+        e.preventDefault()
+        dispatch(changeBackground('bg-two'))
+    }
+
+    const changebg3 = (e) => {
+        e.preventDefault()
+        dispatch(changeBackground('bg-three'))
+    }
+
+    const changebg4 = (e) => {
+        e.preventDefault()
+        dispatch(changeBackground('bg-four'))
+    }
+
     return (
         <div id="minav" ref={nav}>
             <div id="minav-centre">
@@ -39,10 +63,10 @@ const Minav = () => {
 
                     <div id="minav-container-options">
                         <div id="themes">
-                            <div className='bg-one'></div>
-                            <div className='bg-two'></div>
-                            <div className='bg-three'></div>
-                            <div className='bg-four'></div>
+                            <div className='bg-one' onClick={changebg1}></div>
+                            <div className='bg-two' onClick={changebg2}></div>
+                            <div className='bg-three' onClick={changebg3}></div>
+                            <div className='bg-four' onClick={changebg4}></div>
                         </div>
                         <SettingsOutlinedIcon onClick={() => setActive(!active)} className={active ? 'tools settings-active' : 'tools settings-inactive'}/>
                     </div>
