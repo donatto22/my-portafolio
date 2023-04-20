@@ -47,7 +47,7 @@ const Nav = ({ children }) => {
                 </div>
             </div>
 
-            <div id="nav-right">
+            <div id="nav-right" className="bg-one">
                 <Minav/>
 
                 <div id="container">

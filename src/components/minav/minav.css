@@ -98,3 +98,48 @@
 .settings-inactive {
     animation: rotate2 .4s forwards;
 }
+
+/* contenedor de los temas */
+#minav-container-options {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+}
+
+#themes {
+    background-color: rgba(0, 0, 0, .08);
+    padding: 14px 2em;
+    border-radius: 20px;
+    display: flex;
+    gap: 2em;
+}
+
+#themes div {
+    --square: 40px;
+    width: var(--square);
+    height: var(--square);
+    border-radius: 50%;
+    outline: 4px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+#themes div:hover {
+    outline: 4px solid rgba(255, 255, 255, .4);
+}
+
+/* fondos de pantalla */
+.bg-one {
+    background-image: linear-gradient( 111.1deg,  rgba(0,40,70,1) -4.8%, rgba(255,115,115,1) 82.7%, rgba(255,175,123,1) 97.2% );
+}
+
+.bg-two {
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.bg-three {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.bg-four {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}

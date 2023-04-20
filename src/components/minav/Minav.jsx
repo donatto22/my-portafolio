@@ -36,7 +36,16 @@ const Minav = () => {
             <div id="minav-centre">
                 <div id="minav-top">
                     <img src="./lockerglogo.png" alt="locker g logo" />
-                    <SettingsOutlinedIcon onClick={() => setActive(!active)} className={active ? 'tools settings-active' : 'tools settings-inactive'}/>
+
+                    <div id="minav-container-options">
+                        <div id="themes">
+                            <div className='bg-one'></div>
+                            <div className='bg-two'></div>
+                            <div className='bg-three'></div>
+                            <div className='bg-four'></div>
+                        </div>
+                        <SettingsOutlinedIcon onClick={() => setActive(!active)} className={active ? 'tools settings-active' : 'tools settings-inactive'}/>
+                    </div>
                 </div>
 
                 <div id="minav-bottom" className={active ? 'minav-bottom-active' : ''}>
