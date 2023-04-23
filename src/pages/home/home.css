@@ -1,16 +1,57 @@
+#home, #presentation, #details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #home {
     height: 100%;
     width: 70%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     gap: 1em;
 }
 
+/* contenedor de nombre, rol y stack */
 #presentation {
+    width: 100%;
     min-height: 300px;
     border-radius: 16px;
+    justify-content: space-evenly;
+}
+
+/* mi nombre */
+#name {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#rol {
+    font-size: 22px;
+}
+
+/* Contenedor de stack y rol */
+#stack, #rol {
+    color: #dda8a8;
+}
+
+/* la lista */
+#stack ul {
+    display: flex;
+    --padding-stack: 12px;
+}
+
+/* cada item de lista */
+#stack ul li {
+    padding-right: var(--padding-stack);
+}
+
+#stack ul li:not(:first-child) {
+    padding-left: var(--padding-stack);
+}
+
+#stack ul li:not(:last-child) {
+    border-right: 1px solid;
 }
 
 /* contenedor de enlaces */
