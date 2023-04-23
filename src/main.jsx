@@ -9,6 +9,7 @@ import store from './app/store'
 import Home from './pages/home/Home'
 import Contact from './pages/contact/Contact'
 import Projects from './pages/projects/Projects'
+import Products from './pages/products/Products'
 import OutletManager from './outlet'
 
 import AnimatedCursor from "react-animated-cursor"
@@ -30,8 +31,9 @@ createRoot(document.getElementById('root')).render(
             <Routes>
                 <Route path='/' element={<OutletManager />}>
                     <Route index element={<Home />} />
-                    <Route path='/contact' element={<Contact />} />
                     <Route path='/projects' element={<Projects />} />
+                    <Route path='/products' element={<Products />} />
+                    <Route path='/contact' element={<Contact />} />
                 </Route>
             </Routes>
         </Provider>
