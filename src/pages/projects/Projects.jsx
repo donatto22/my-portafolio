@@ -11,7 +11,7 @@ const Projects = () => {
 	useEffect(() => {
 		ScrollReveal().reveal(myRef.current, {
 		  // opciones de configuración aquí
-		  duration: 700
+		  duration: 700,
 		})
 	}, [])
 

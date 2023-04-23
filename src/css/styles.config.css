@@ -6,6 +6,9 @@
 /* Normalize */
 @import url("./normalize.css");
 
+/* glasmorphismm efect */
+@import url("./glasmorphism.css");
+
 :root {
     --red-dark: #ea2c1a;
     --blue-dark: #0f283d;
