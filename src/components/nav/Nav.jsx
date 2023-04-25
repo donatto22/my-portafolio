@@ -45,8 +45,8 @@ const Nav = ({ children }) => {
                     <div id="links-nav">
                         <NavLink to='/'><HomeOutlinedIcon/> Inicio</NavLink>
                         <NavLink to='/projects'><FolderOutlinedIcon/> Proyectos</NavLink>
-                        <NavLink to='/products'><Inventory2OutlinedIcon/> Productos</NavLink>
-                        <NavLink to='/contact'><PersonOutlineOutlinedIcon/> Contáctame</NavLink>
+                        {/* <NavLink to='/products'><Inventory2OutlinedIcon/> Productos</NavLink>
+                        <NavLink to='/contact'><PersonOutlineOutlinedIcon/> Contáctame</NavLink> */}
                     </div>
                 </div>
             </div>
