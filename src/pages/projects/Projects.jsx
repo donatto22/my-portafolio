@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import ScrollReveal from "scrollreveal";
+import ScrollReveal from "scrollreveal"
 
 import './projects.css'
-import Repositories from './repositories/Repositories';
-import Toprepo from './toprepo/Toprepo';
+import Repositories from './repositories/Repositories'
 
 const Projects = () => {
     const myRef = useRef(null)	
@@ -21,7 +20,7 @@ const Projects = () => {
     useEffect(() => {
 		fetch(`https://api.github.com/users/donatto22/repos`)
 			.then(response => response.json())
-			.then(data => setRepos(data));
+			.then(data => setRepos(data))
 	}, [])
 
     let vivian = []
@@ -29,15 +28,17 @@ const Projects = () => {
     return (
         <div id="projects" ref={myRef}>
             <div id="top">
-                {
-                    repos &&
-                    (() => {
-                        const targetRepo = (id) => { return repos.find(repo => repo.id === id) }// vivian
-                        return (
-                            <Toprepo targetRepo={targetRepo(380901585)} /> // vivian
-                        )
-                    })()
-                }
+                <a href="https://github.com/donatto22/vivian" target='_blank'>
+                    <div className="image-top">
+                        <img src="vivian-page.png" alt="vivian page" />
+                    </div>
+                </a>
+
+                <a href="https://github.com/donatto22/tousirm-page" target='_blank'>
+                    <div className="image-top">
+                        <img src="captura.png" alt="tourism page" />
+                    </div>
+                </a>
             </div>
 
             <Repositories repos={repos}/>
