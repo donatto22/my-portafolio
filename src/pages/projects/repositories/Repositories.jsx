@@ -5,7 +5,7 @@ import LaunchOutlinedIcon from '@mui/icons-material/LaunchOutlined'
 
 const Repositories = ({ repos }) => {
     return (
-        <div id="repo">
+        <div id="repo" className='black-g'>
             <div id="repo-content">
                 <div>Proyectos / Repositorios</div>
 
