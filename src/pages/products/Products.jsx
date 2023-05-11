@@ -13,6 +13,8 @@ const Products = () => {
                         <ProductCard key={p.id} title={p.title}
                         imageUrl={p.imageUrl}
                         description={p.description}
+                        webpage={p.webpage}
+                        repository={p.repository}
                         glasmorphismClass={'black-g'}/>
                     ))
                 }
