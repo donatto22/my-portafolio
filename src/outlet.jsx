@@ -1,9 +1,29 @@
 import { Outlet } from 'react-router-dom'
 import Nav from './components/nav/Nav'
 
+import AnimatedCursor from "react-animated-cursor"
+
+import { useSelector } from 'react-redux'
+
+
 const OutletManager = () => {
+    const cursorSelector = useSelector(state => state.cursor)
     return (
         <>
+        {
+            cursorSelector && (
+                <AnimatedCursor color="255,120,155"innerSize={8}
+                    outerSize={45}
+                    innerScale={1}
+                    outerScale={1.5}
+                    outerAlpha={0}
+                    outerStyle={{
+                        border: '2px solid var(--discord-blue2)'
+                    }}
+                />
+            )
+        }
+
         <Nav>
             <Outlet/>
         </Nav>

@@ -4,7 +4,7 @@ import ScrollReveal from "scrollreveal"
 import './home.css'
 
 // iconos
-import { FaLinkedinIn, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn, FaWhatsapp, FaGithub } from 'react-icons/fa'
 
 function Home() {
 	const myRef = useRef(null)	
@@ -18,6 +18,7 @@ function Home() {
 
 	return (
 		<div id="home" ref={myRef}>
+
 			<div id="presentation" className='black-g'>
 				<div id="details">
 					<div id="name">Donatto Minaya</div>

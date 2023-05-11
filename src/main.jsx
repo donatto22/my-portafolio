@@ -12,22 +12,9 @@ import Projects from './pages/projects/Projects'
 import Products from './pages/products/Products'
 import OutletManager from './outlet'
 
-import AnimatedCursor from "react-animated-cursor"
-
 createRoot(document.getElementById('root')).render(
 	<BrowserRouter>
         <Provider store={store}>
-            <AnimatedCursor color="255,120,155"
-                innerSize={8}
-                outerSize={45}
-                innerScale={1}
-                outerScale={1.5}
-                outerAlpha={0}
-                outerStyle={{
-                    border: '2px solid var(--discord-blue2)'
-                }}
-            />
-
             <Routes>
                 <Route path='/' element={<OutletManager />}>
                     <Route index element={<Home />} />

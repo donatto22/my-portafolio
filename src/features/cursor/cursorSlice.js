@@ -4,12 +4,7 @@ export const cursorSlice = createSlice({
     name: 'cursor',
     initialState: true,
     reducers: {
-        enableCursor: (state, action) => {
-            // console.log(state, action)
-            return action.payload
-        },
-
-        disabledCursor: (state, action) => {
+        toggleCursor: (state, action) => {
             // console.log(state, action)
             return action.payload
         }

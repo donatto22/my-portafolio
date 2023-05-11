@@ -38,11 +38,6 @@ const Minav = () => {
         }    
     }
 
-    // cambiar cursor
-    const toggleCursor = async () => {
-        dispatch(toggleCursor(setEnabled(!enabled)))
-    }
-
     const dispatch = useDispatch()
 
     const changebg1 = (e) => {
@@ -65,6 +60,15 @@ const Minav = () => {
         dispatch(changeBackground('bg-four'))
     }
 
+    // cambiar cursor
+    const handleCursor = async () => {
+        setEnabled(!enabled) // deshabilitando
+
+        // si está habilitado, entonces deshabilitar
+        if(enabled) dispatch(toggleCursor(false))
+        else dispatch(toggleCursor(true))
+    }
+
     return (
         <div id="minav" ref={nav}>
             <div id="minav-centre">
@@ -85,7 +89,7 @@ const Minav = () => {
                 <div id="minav-bottom" className={active ? 'minav-bottom-active' : ''}>
                     {/* fullscreen */}
                     <FullscreenOutlinedIcon onClick={handleFullscreen}/>
-                    <RxCursorArrow onClick={toggleCursor}/>
+                    <RxCursorArrow onClick={handleCursor}/>
                 </div>
             </div>
         </div>

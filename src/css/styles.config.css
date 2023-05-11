@@ -94,6 +94,7 @@
 }
 
 html, body {
+    cursor: default !important;
     scroll-behavior: smooth;
 }
 
