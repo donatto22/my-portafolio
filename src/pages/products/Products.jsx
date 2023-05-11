@@ -10,7 +10,10 @@ const Products = () => {
             <div id="products-container">
                 {
                     productsData.map(p => (
-                        <ProductCard key={p.id} glasmorphismClass={'black-g'}/>
+                        <ProductCard key={p.id} title={p.title}
+                        imageUrl={p.imageUrl}
+                        description={p.description}
+                        glasmorphismClass={'black-g'}/>
                     ))
                 }
             </div>

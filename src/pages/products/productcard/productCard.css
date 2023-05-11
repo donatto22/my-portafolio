@@ -2,6 +2,39 @@
     border-radius: 10px;
     /* Esto evitará que los divs se estrechen para ajustarse al contenedor cuando se reduce el ancho del navegador. */
     flex-shrink: 0;
-    width: 590px;
+    width: 600px;
     height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+/* margen izquierdo */
+.product > div {
+    margin-left: 2em;
+}
+
+/* margen derecho */
+.product > div:last-child {
+    margin-right: 2em;
+}
+
+/* las imagenes de cada producto */
+.product-image {
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* los titulos de cada producto */
+.product-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+/* descripcion de cada producto */
+.product-description {
+    line-height: 1.6;
+    text-align: justify;
+    color: #ecc2c2;
 }

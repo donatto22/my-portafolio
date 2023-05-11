@@ -2,13 +2,15 @@
     {
         "id": "product1",
         "title": "ToxicDoll",
-        "description": "Un Bot hecho en javacript para la plataforma Discord, contiene muchas funcionalidades como reproductor de música, una calculadora y búsquedas en internet."
+        "imageUrl": "./avatar.webp",
+        "description": "Un Bot hecho en javacript para la plataforma Discord, incluye un reproductor de música, una calculadora y búsquedas en internet."
     },
 
     {
         "id": "product2",
         "title": "Ax-Calculator",
-        "description": "Un paquete npm con fórmulas matemáticas que se puede usar por el lado backend, contiene ecuaciones avanzadas como problemas específicos en la vida real."
+        "imageUrl": "./logo.webp",
+        "description": "Un paquete npm con fórmulas matemáticas con su uso en backend, contiene ecuaciones avanzadas como problemas específicos en la vida real."
     },
 
     {
