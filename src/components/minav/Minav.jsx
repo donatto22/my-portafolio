@@ -4,12 +4,20 @@ import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { changeBackground } from '../../features/background/backgroundSlice'
+import { toggleCursor } from '../../features/cursor/cursorSlice'
+
+import { RxCursorArrow } from 'react-icons/rx';
 
 const Minav = () => {
+    // estado para la barra de configuración
     const [active, setActive] = useState(false)
 
+    // estado para el cursor
+    const [enabled, setEnabled] = useState(true)
+
+    // referencia al nav
     const nav = useRef(null)
 
     useEffect(() => {
@@ -21,18 +29,21 @@ const Minav = () => {
     const handleFullscreen = async () => {
         const bool = document.fullscreenElement
         console.log(bool)
+        
         // inactivo
         if (!bool) {
             await document.body.requestFullscreen() // activar
-            setEnabled(!enabled)
         } else {
             document.exitFullscreen()
-            setEnabled(!enabled)
         }    
     }
 
+    // cambiar cursor
+    const toggleCursor = async () => {
+        dispatch(toggleCursor(setEnabled(!enabled)))
+    }
+
     const dispatch = useDispatch()
-    const selector = useSelector(state => state.background)
 
     const changebg1 = (e) => {
         e.preventDefault()
@@ -74,6 +85,7 @@ const Minav = () => {
                 <div id="minav-bottom" className={active ? 'minav-bottom-active' : ''}>
                     {/* fullscreen */}
                     <FullscreenOutlinedIcon onClick={handleFullscreen}/>
+                    <RxCursorArrow onClick={toggleCursor}/>
                 </div>
             </div>
         </div>

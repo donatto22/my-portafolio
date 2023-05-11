@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { NavLink } from "react-router-dom"
 
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined'
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
