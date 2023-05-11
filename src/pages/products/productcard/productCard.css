@@ -1,0 +1,7 @@
+.product {
+    border-radius: 10px;
+    /* Esto evitará que los divs se estrechen para ajustarse al contenedor cuando se reduce el ancho del navegador. */
+    flex-shrink: 0;
+    width: 590px;
+    height: 320px;
+}

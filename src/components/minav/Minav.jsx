@@ -37,7 +37,6 @@ const Minav = () => {
     const changebg1 = (e) => {
         e.preventDefault()
         dispatch(changeBackground('bg-one'))
-        console.log(selector)
     }
 
     const changebg2 = (e) => {
