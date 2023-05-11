@@ -8,7 +8,10 @@ import { useDispatch } from 'react-redux'
 import { changeBackground } from '../../features/background/backgroundSlice'
 import { toggleCursor } from '../../features/cursor/cursorSlice'
 
-import { RxCursorArrow } from 'react-icons/rx';
+// alternar fullscreen
+import { handleFullscreen } from './handleFullscreen'
+
+import { RxCursorArrow } from 'react-icons/rx'
 
 const Minav = () => {
     // estado para la barra de configuración
@@ -25,39 +28,11 @@ const Minav = () => {
         document.documentElement.style.setProperty('--minav-height', nav.current.offsetHeight + 'px');
     }, [])
 
-    // Habilitar fullscreen
-    const handleFullscreen = async () => {
-        const bool = document.fullscreenElement
-        console.log(bool)
-        
-        // inactivo
-        if (!bool) {
-            await document.body.requestFullscreen() // activar
-        } else {
-            document.exitFullscreen()
-        }    
-    }
-
     const dispatch = useDispatch()
 
-    const changebg1 = (e) => {
-        e.preventDefault()
-        dispatch(changeBackground('bg-one'))
-    }
-
-    const changebg2 = (e) => {
-        e.preventDefault()
-        dispatch(changeBackground('bg-two'))
-    }
-
-    const changebg3 = (e) => {
-        e.preventDefault()
-        dispatch(changeBackground('bg-three'))
-    }
-
-    const changebg4 = (e) => {
-        e.preventDefault()
-        dispatch(changeBackground('bg-four'))
+    // cambiar el fondo según el que se le pida
+    const changebg = (bgclass) => {
+        dispatch(changeBackground(bgclass))
     }
 
     // cambiar cursor
@@ -77,10 +52,10 @@ const Minav = () => {
 
                     <div id="minav-container-options">
                         <div id="themes">
-                            <div className='bg-one' onClick={changebg1}></div>
-                            <div className='bg-two' onClick={changebg2}></div>
-                            <div className='bg-three' onClick={changebg3}></div>
-                            <div className='bg-four' onClick={changebg4}></div>
+                            <div className='bg-one' onClick={() => {changebg('bg-one')}}></div>
+                            <div className='bg-two' onClick={() => {changebg('bg-two')}}></div>
+                            <div className='bg-three' onClick={() => {changebg('bg-three')}}></div>
+                            <div className='bg-four' onClick={() => {changebg('bg-four')}}></div>
                         </div>
                         <SettingsOutlinedIcon onClick={() => setActive(!active)} className={active ? 'tools settings-active' : 'tools settings-inactive'}/>
                     </div>
