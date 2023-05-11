@@ -3,6 +3,7 @@
         "id": "product1",
         "title": "ToxicDoll",
         "imageUrl": "./avatar.webp",
+        "borderRadius": "true",
         "webpage": "https://toxicdoll.vercel.app",
         "description": "Un Bot hecho en javacript para la plataforma Discord, incluye un reproductor de música, una calculadora y búsquedas en internet."
     },
@@ -19,6 +20,7 @@
     {
         "id": "product3",
         "title": "Ax-handler",
+        "imageUrl": "./folder.webp",
         "repository": "https://github.com/donatto22/ax-handler",
         "description": "Paquete npm que organiza y obtiene los comandos a ser ejecutados en un bot de discord así también como los eventos que puede tener."
     }

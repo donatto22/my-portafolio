@@ -12,6 +12,7 @@ const Products = () => {
                     productsData.map(p => (
                         <ProductCard key={p.id} title={p.title}
                         imageUrl={p.imageUrl}
+                        borderRadius={p.borderRadius}
                         description={p.description}
                         webpage={p.webpage}
                         repository={p.repository}

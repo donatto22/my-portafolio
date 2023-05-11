@@ -21,9 +21,13 @@
 /* las imagenes de cada producto */
 .product-image {
     width: 180px;
-    border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
+}
+
+/* si la imagen contiene true en la prop border-radius */
+.product-image img[data-border-radius='true'] {
+    border-radius: 50%;
 }
 
 /* los titulos de cada producto */
@@ -43,7 +47,7 @@
 .product-links {
     display: flex;
     margin-top: 1em;
-    gap: 4px;
+    gap: 10px;
 }
 
 /* cada link */

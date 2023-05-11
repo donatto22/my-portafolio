@@ -1,11 +1,11 @@
 import './productCard.css'
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined'
 
-const ProductCard = ({ title, description, imageUrl, webpage, repository, glasmorphismClass }) => {
+const ProductCard = ({ title, description, imageUrl, webpage, repository, borderRadius, glasmorphismClass }) => {
     return (
         <div className={`product ${glasmorphismClass}`}>
             <div className="product-image">
-                <img src={imageUrl} alt="" loading='lazy' />
+                <img src={imageUrl} alt="" loading='lazy' data-border-radius={borderRadius}/>
             </div>
 
             <div className="product-content">
