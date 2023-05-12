@@ -12,6 +12,9 @@ import Projects from './pages/projects/Projects'
 import Products from './pages/products/Products'
 import OutletManager from './outlet'
 
+import ReactGa from 'react-ga'
+ReactGa.initialize('G-YD30L6VZZZ')
+
 createRoot(document.getElementById('root')).render(
 	<BrowserRouter>
         <Provider store={store}>

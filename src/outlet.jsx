@@ -5,7 +5,6 @@ import AnimatedCursor from "react-animated-cursor"
 
 import { useSelector } from 'react-redux'
 
-
 const OutletManager = () => {
     const cursorSelector = useSelector(state => state.cursor)
     return (
