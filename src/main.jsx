@@ -15,6 +15,9 @@ import OutletManager from './outlet'
 import ReactGa from 'react-ga'
 ReactGa.initialize('G-YD30L6VZZZ')
 
+import { hotjar } from 'react-hotjar'
+hotjar.initialize(3489963, 6)
+
 createRoot(document.getElementById('root')).render(
 	<BrowserRouter>
         <Provider store={store}>
