@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
-import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined'
+import { BsFullscreen, BsInfoCircle } from 'react-icons/bs'
 
+// Redux
 import { useDispatch } from 'react-redux'
 import { changeBackground } from '../../features/background/backgroundSlice'
 import { toggleCursor } from '../../features/cursor/cursorSlice'
@@ -63,8 +64,9 @@ const Minav = () => {
 
                 <div id="minav-bottom" className={active ? 'minav-bottom-active' : ''}>
                     {/* fullscreen */}
-                    <FullscreenOutlinedIcon onClick={handleFullscreen}/>
-                    <RxCursorArrow onClick={handleCursor}/>
+                    <BsFullscreen onClick={handleFullscreen} title='Pantalla completa'/>
+                    <RxCursorArrow onClick={handleCursor} title='Alternar cursor'/>
+                    <BsInfoCircle title='Acerca del portafolio'/>
                 </div>
             </div>
         </div>
