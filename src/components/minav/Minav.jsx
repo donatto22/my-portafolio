@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import { BsFullscreen, BsInfoCircle } from 'react-icons/bs'
+import { RxCursorArrow } from 'react-icons/rx'
 
 // Redux
 import { useDispatch } from 'react-redux'
@@ -12,7 +13,9 @@ import { toggleCursor } from '../../features/cursor/cursorSlice'
 // alternar fullscreen
 import { handleFullscreen } from './handleFullscreen'
 
-import { RxCursorArrow } from 'react-icons/rx'
+// Portal para mostrar el modal de información del portafolio
+import { createPortal } from 'react-dom'
+
 
 const Minav = () => {
     // estado para la barra de configuración
