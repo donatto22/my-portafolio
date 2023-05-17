@@ -1,0 +1,35 @@
+/* contenedor del modal con fondo difuminado */
+#container-modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* el modal */
+#modal {
+    background-color: rgba(255, 255, 255, .08);
+    box-shadow: 0 0 200px 10px rgba(255, 255, 255, .2);
+    outline: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* boton para cerrar modal */
+#closeModal {
+    position: absolute;
+    top: 20%;
+
+    background-color: transparent;
+    padding: 0px 10px;
+    color: white;
+    font-size: 40px;
+}

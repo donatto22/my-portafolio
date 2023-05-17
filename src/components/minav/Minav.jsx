@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 
+// modal de informacion del repo
+import InfoModal from '../infomodal/InfoModal'
+
+// Estilos e iconos
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import { BsFullscreen, BsInfoCircle } from 'react-icons/bs'
@@ -23,6 +27,9 @@ const Minav = () => {
 
     // estado para el cursor
     const [enabled, setEnabled] = useState(true)
+
+    // estado para el modal
+    const [modalActive, setModalActive] = useState(false)
 
     // referencia al nav
     const nav = useRef(null)
@@ -48,6 +55,14 @@ const Minav = () => {
         else dispatch(toggleCursor(true))
     }
 
+    // alternar modal
+    const openModal = (boolean) => {
+        if (boolean) {
+            setModalActive(true) // muestra el modal
+        } else setModalActive(false) // cierra el modal
+    }
+
+
     return (
         <div id="minav" ref={nav}>
             <div id="minav-centre">
@@ -69,7 +84,8 @@ const Minav = () => {
                     {/* fullscreen */}
                     <BsFullscreen onClick={handleFullscreen} title='Pantalla completa'/>
                     <RxCursorArrow onClick={handleCursor} title='Alternar cursor'/>
-                    <BsInfoCircle title='Acerca del portafolio'/>
+                    <BsInfoCircle title='Acerca del portafolio' onClick={() => { openModal(true) }}/>
+                    { modalActive && createPortal(<InfoModal closeModalFunction={ () => { openModal(false) } }/>, document.querySelector('#infoModal')) }
                 </div>
             </div>
         </div>
