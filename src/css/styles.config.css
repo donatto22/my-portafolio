@@ -6,8 +6,11 @@
 /* Normalize */
 @import url("./normalize.css");
 
-/* glasmorphismm efect */
+/* glasmorphismm effect */
 @import url("./glasmorphism.css");
+
+/* change color effect */
+@import url("./textColor.css");
 
 :root {
     --red-dark: #ea2c1a;

@@ -79,7 +79,9 @@ const Minav = () => {
                     <div id="minav-container-options">
                         <div id="themes">
                             <div className='bg-one' onClick={() => {changebg('bg-one'); changeglass('black-g')}}></div>
-                            <div className='bg-two' onClick={() => {changebg('bg-two'); changeglass('black-g')}}></div>
+                            {/* <div className='bg-two' onClick={() => { 
+                                changebg('bg-two'); changeglass('black-g'); changeTextColor('')
+                            }}></div> */}
                             <div className='bg-three' onClick={() => {changebg('bg-three'); changeglass('white-g')}}></div>
                             <div className='bg-four' onClick={() => {changebg('bg-four'); changeglass('white-g')}}></div>
                         </div>

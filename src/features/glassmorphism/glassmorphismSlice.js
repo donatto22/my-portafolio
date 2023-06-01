@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 export const glassmorphismSlice = createSlice({
-    name: 'cursor',
+    name: 'glassmorphism',
     initialState: 'black-g',
     reducers: {
         toggleGlass: (state, action) => {

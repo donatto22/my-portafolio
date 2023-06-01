@@ -19,6 +19,7 @@ function Home() {
 	}, [])
 	
     const glassmorphism = useSelector(state => state.glassmorphism)
+    const textColor = useSelector(state => state.text)
 
 	return (
 		<div id="home" ref={myRef}>
@@ -26,10 +27,10 @@ function Home() {
 			<div id="presentation" className={glassmorphism}>
 				<div id="details">
 					<div id="name">Donatto Minaya</div>
-					<div id="rol">Front End Developer</div>
+					<div id="rol" className={textColor}>Front End Developer</div>
 				</div>
 
-				<div id="stack">
+				<div id="stack" className={textColor}>
 					<ul>
 						<li>Html</li>
 						<li>CSS</li>
