@@ -30,13 +30,13 @@ const Projects = () => {
             <div id="top">
                 <a href="https://github.com/donatto22/vivian" target='_blank'>
                     <div className="image-top">
-                        <img src="vivian-page.png" alt="vivian page" />
+                        <img src="vivian-page.webp" alt="vivian page" />
                     </div>
                 </a>
 
                 <a href="https://github.com/donatto22/tousirm-page" target='_blank'>
                     <div className="image-top">
-                        <img src="captura.png" alt="tourism page" />
+                        <img src="captura.webp" alt="tourism page" />
                     </div>
                 </a>
             </div>
