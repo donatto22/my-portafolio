@@ -3,9 +3,13 @@ import './repositories.css'
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined'
 import LaunchOutlinedIcon from '@mui/icons-material/LaunchOutlined'
 
+import { useSelector } from 'react-redux'
+
 const Repositories = ({ repos }) => {
+    const glassmorphism = useSelector(state => state.glassmorphism)
+
     return (
-        <div id="repo" className='black-g'>
+        <div id="repo" className={glassmorphism}>
             <div id="repo-content">
                 <div>Proyectos / Repositorios</div>
 

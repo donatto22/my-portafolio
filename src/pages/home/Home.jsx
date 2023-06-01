@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 import ScrollReveal from "scrollreveal"
 
 import './home.css'
+import { useSelector } from 'react-redux'
+
 
 // iconos
 import { FaLinkedinIn, FaWhatsapp, FaGithub } from 'react-icons/fa'
@@ -15,11 +17,13 @@ function Home() {
 		  duration: 700,
 		})
 	}, [])
+	
+    const glassmorphism = useSelector(state => state.glassmorphism)
 
 	return (
 		<div id="home" ref={myRef}>
 
-			<div id="presentation" className='black-g'>
+			<div id="presentation" className={glassmorphism}>
 				<div id="details">
 					<div id="name">Donatto Minaya</div>
 					<div id="rol">Front End Developer</div>
@@ -37,7 +41,7 @@ function Home() {
 				</div>
 			</div>
 
-			<div id="social-media" className='black-g'>
+			<div id="social-media" className={glassmorphism}>
 				{/* linkedin */}
 				<a href='https://www.linkedin.com/in/devdonatto-minaya/' className='black-g'><FaLinkedinIn/></a>
 

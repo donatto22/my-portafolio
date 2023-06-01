@@ -6,13 +6,15 @@ import InfoModal from '../infomodal/InfoModal'
 // Estilos e iconos
 import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
-import { BsFullscreen, BsInfoCircle } from 'react-icons/bs'
+import { BsFullscreen } from 'react-icons/bs'
 import { RxCursorArrow } from 'react-icons/rx'
 
 // Redux
 import { useDispatch } from 'react-redux'
 import { changeBackground } from '../../features/background/backgroundSlice'
 import { toggleCursor } from '../../features/cursor/cursorSlice'
+import { toggleGlass } from "../../features/glassmorphism/glassmorphismSlice"
+
 
 // alternar fullscreen
 import { handleFullscreen } from './handleFullscreen'
@@ -46,6 +48,11 @@ const Minav = () => {
         dispatch(changeBackground(bgclass))
     }
 
+    // cambiar el color de fondo los divs
+    const changeglass = (gclass) => {
+        dispatch(toggleGlass(gclass))
+    }
+
     // cambiar cursor
     const handleCursor = async () => {
         setEnabled(!enabled) // deshabilitando
@@ -71,10 +78,10 @@ const Minav = () => {
 
                     <div id="minav-container-options">
                         <div id="themes">
-                            <div className='bg-one' onClick={() => {changebg('bg-one')}}></div>
-                            <div className='bg-two' onClick={() => {changebg('bg-two')}}></div>
-                            <div className='bg-three' onClick={() => {changebg('bg-three')}}></div>
-                            <div className='bg-four' onClick={() => {changebg('bg-four')}}></div>
+                            <div className='bg-one' onClick={() => {changebg('bg-one'); changeglass('black-g')}}></div>
+                            <div className='bg-two' onClick={() => {changebg('bg-two'); changeglass('black-g')}}></div>
+                            <div className='bg-three' onClick={() => {changebg('bg-three'); changeglass('white-g')}}></div>
+                            <div className='bg-four' onClick={() => {changebg('bg-four'); changeglass('white-g')}}></div>
                         </div>
                         <SettingsOutlinedIcon onClick={() => setActive(!active)} className={active ? 'tools settings-active' : 'tools settings-inactive'}/>
                     </div>

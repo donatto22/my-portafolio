@@ -4,7 +4,11 @@ import ProductCard from './productcard/ProductCard'
 // data
 import productsData from'./products.json'
 
+import { useSelector } from 'react-redux'
+
 const Products = () => {
+    const glassmorphism = useSelector(state => state.glassmorphism)
+
     return (
         <div id="products">
             <div id="products-container">
@@ -16,7 +20,7 @@ const Products = () => {
                         description={p.description}
                         webpage={p.webpage}
                         repository={p.repository}
-                        glasmorphismClass={'black-g'}/>
+                        glasmorphismClass={glassmorphism}/>
                     ))
                 }
             </div>
