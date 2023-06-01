@@ -84,8 +84,8 @@ const Minav = () => {
                     {/* fullscreen */}
                     <BsFullscreen onClick={handleFullscreen} title='Pantalla completa'/>
                     <RxCursorArrow onClick={handleCursor} title='Alternar cursor'/>
-                    <BsInfoCircle title='Acerca del portafolio' onClick={() => { openModal(true) }}/>
-                    { modalActive && createPortal(<InfoModal closeModalFunction={ () => { openModal(false) } }/>, document.querySelector('#infoModal')) }
+                    {/* <BsInfoCircle title='Acerca del portafolio' onClick={() => { openModal(true) }}/> */}
+                    {/* { modalActive && createPortal(<InfoModal closeModalFunction={ () => { openModal(false) } }/>, document.querySelector('#infoModal')) } */}
                 </div>
             </div>
         </div>
