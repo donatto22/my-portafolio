@@ -1,8 +1,9 @@
 :root {
     --height: 100vh;
-}
+}   
 
 #nav {
+    --nav-left-width: 400px;
     width: 100vw;
     display: flex;
 }
@@ -10,15 +11,14 @@
 #nav-left {
     background-color: var(--discord-black4);
     color: var(--default-shadow-gray);
-    /* margin: 4em 1em 0; */
-    width: 400px;
+    width: var(--nav-left-width);
     height: var(--height);
 }
 
 /* fondo */
 #nav-right {
     min-height: 100vh;
-    width: calc(100vw - 400px);
+    width: calc(100vw - var(--nav-left-width));
 }
 
 #nav-content {

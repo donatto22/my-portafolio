@@ -74,7 +74,9 @@ const Minav = () => {
         <div id="minav" ref={nav}>
             <div id="minav-centre">
                 <div id="minav-top">
-                    <img src="./lockerglogo.png" alt="locker g logo" />
+                    <div id="minav-logo">
+                        <img src="./lockerglogo.png" alt="locker g logo" />
+                    </div>
 
                     <div id="minav-container-options">
                         <div id="themes">

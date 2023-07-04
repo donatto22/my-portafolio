@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux'
 import Minav from '../minav/Minav'
 
 import './nav.css'
+import './nav.responsive.css'
 
 const Nav = ({ children }) => {
 	const [user, setUser] = useState(null)

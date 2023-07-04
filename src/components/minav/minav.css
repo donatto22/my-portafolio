@@ -13,6 +13,24 @@
     padding: .6em 2em .4em .5em;
 }
 
+/* el logo y el botón de opciones */
+#minav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* el boton de opciones */
+#minav-logo svg {
+    cursor: pointer;
+    transform: scale(1.8);
+    color: var(--default-shadow-gray);
+}
+
+#minav-logo svg:hover {
+    color: var(--shadow-clear);
+}
+
 /* logo */
 #minav-top img {
     width: 80px;
