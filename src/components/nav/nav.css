@@ -3,7 +3,7 @@
 }   
 
 #nav {
-    --nav-left-width: 400px;
+    --nav-left-width: 340px;
     width: 100vw;
     display: flex;
 }

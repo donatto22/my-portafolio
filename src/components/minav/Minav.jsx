@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 
 // modal de informacion del repo
 import InfoModal from '../infomodal/InfoModal'
@@ -8,6 +8,7 @@ import './minav.css'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import { BsFullscreen } from 'react-icons/bs'
 import { RxCursorArrow } from 'react-icons/rx'
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 
 // Redux
 import { useDispatch } from 'react-redux'
@@ -22,6 +23,9 @@ import { handleFullscreen } from './handleFullscreen'
 // Portal para mostrar el modal de información del portafolio
 import { createPortal } from 'react-dom'
 
+// toggle menu
+import { Context } from '../../Context'
+
 
 const Minav = () => {
     // estado para la barra de configuración
@@ -35,6 +39,9 @@ const Minav = () => {
 
     // referencia al nav
     const nav = useRef(null)
+
+    // toggle menu
+    const { menu, setMenu } = useContext(Context)
 
     useEffect(() => {
         if (nav.current)
@@ -75,7 +82,8 @@ const Minav = () => {
             <div id="minav-centre">
                 <div id="minav-top">
                     <div id="minav-logo">
-                        <img src="./lockerglogo.png" alt="locker g logo" />
+                        <img src="./lockerglogo.png" alt="locker g logo"/>
+                        <MenuOutlinedIcon onClick={() => { setMenu(!menu) }}/>
                     </div>
 
                     <div id="minav-container-options">
