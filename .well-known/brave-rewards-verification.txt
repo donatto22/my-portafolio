@@ -1,4 +1,0 @@
-This is a Brave Creators publisher verification file.
-
-Domain: marenol.vercel.app
-Token: f7ba1f7ed1c1688f6cccf8cfcfa336769219e3217b32d401f6ff1559528ca7ae
